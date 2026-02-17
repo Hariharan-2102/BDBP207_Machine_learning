@@ -1,13 +1,12 @@
 import pandas as pds
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import accuracy_score
 
 def main():
-    data = pds.read_csv("data.csv")
+    data = pds.read_csv("../Lab6/data.csv")
     x = data.drop(["diagnosis", "id",'Unnamed: 32'], axis=1)
     y = data["diagnosis"]
     x = x.values
